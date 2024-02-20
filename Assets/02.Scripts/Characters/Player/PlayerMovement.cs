@@ -11,23 +11,30 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("이동관련 스탯")]
     [SerializeField] private float speed;
+
     [SerializeField] private float jumpForce;
 
     private bool isGround;
+
     void Start()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         Move();
+        Debug.Log(_curMoveInput);
     }
 
     void Move()
     {
-        _rigidbody2D.velocity = _curMoveInput * speed;
+        Vector2 dir = transform.right * _curMoveInput.x;
+        dir *= speed;
+        dir.y = _rigidbody2D.velocity.y;
+        _rigidbody2D.velocity = dir;
     }
+
 
     public void OnMoveInput(InputAction.CallbackContext context)
     {
@@ -37,18 +44,16 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (context.phase == InputActionPhase.Canceled)
         {
-            _curMoveInput = Vector2.zero;
+            _curMoveInput = Vector2.zero; //이 부분을 바꿔주는게 좋을듯.
         }
     }
 
     public void OnJumpInput(InputAction.CallbackContext context)
     {
-        Debug.Log("Up");
         //TODO : 그라운드 감지는 레이로 하는게 좋을 듯.
         if (context.phase == InputActionPhase.Started)
         {
-            _rigidbody2D.AddForce(Vector2.up*jumpForce,ForceMode2D.Impulse);
+            _rigidbody2D.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         }
     }
-    
 }
