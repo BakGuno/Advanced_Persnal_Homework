@@ -23,6 +23,9 @@
 2. ObjectPooling으로 과일을 재사용하려 생각했지만 Stage를 씬 별로 구성하려 하였기에 불필요하다 판단하여 폐기했습니다.
 3. 데이터 통신과 Json으로 대화를 구성해볼까 생각했지만, Json을 다운로드 받으면 LocalData를 처리하는 것과 별반 다르지 않아 Scriptable Object로 전환하였습니다.
 
+## 문제사항
+1. Stage1을 구성하고 Run했을 때 씬이 Not Load가 발생하며 Unity가 강제로 종료되는 현상
+
 ## 사용 패키지
 1. Input System
 2. TextMesh Pro
