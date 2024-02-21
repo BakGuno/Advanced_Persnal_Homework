@@ -7,6 +7,6 @@ public class SceneMover : SingletoneBase<SceneMover>
 {
    public void OnStartBtnClick()
    {
-      SceneManager.LoadScene("example1");
+      SceneManager.LoadScene("TutorialScene");
    }
 }
