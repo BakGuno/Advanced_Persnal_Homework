@@ -34,3 +34,4 @@
 1. [2D Background Kit](https://assetstore.unity.com/packages/2d/environments/2d-background-55095)
 2. [2D Casual Game UI HD](https://assetstore.unity.com/packages/2d/gui/2d-casual-game-ui-hd-259245)
 3. [Pixel Adventure 1](https://assetstore.unity.com/packages/2d/characters/pixel-adventure-1-155360)
+4. [DOTween (HOTween v2)](https://assetstore.unity.com/packages/tools/animation/dotween-hotween-v2-27676)
