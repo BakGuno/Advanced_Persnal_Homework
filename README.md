@@ -11,7 +11,10 @@
 - [Project : 곰 피하기](https://youtu.be/6yMxCCxOlJY)
 ## 개발 환경
   - Unity 3.2f
-
+## 변경내용
+1. Stage1 추가
+2. Spawn, Die 애니메이션에 이동 못하도록 변경
+   
 ## 구현 내용 
 1. DOTWeen을 이용해 UI가 이동하도록 해보았습니다.
 2. UIManager를 활용해 필요에 따라 생성, 파괴하도록 하였습니다.
