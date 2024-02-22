@@ -27,7 +27,7 @@
 3. 데이터 통신과 Json으로 대화를 구성해볼까 생각했지만, Json을 다운로드 받으면 LocalData를 처리하는 것과 별반 다르지 않아 Scriptable Object로 전환하였습니다.
 
 ## 문제사항
-1. Stage1을 구성하고 Run했을 때 씬이 Not Load가 발생하며 Unity가 강제로 종료되는 현상
+1. Stage1을 구성하고 Run했을 때 씬이 Not Load가 발생하며 Unity가 강제로 종료되는 현상 => Goal의 TriggerEneter2D에 조건이 없어 계속 Scene Load가 반복되던 현상 수정
 
 ## 사용 패키지
 1. Input System
