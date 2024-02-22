@@ -44,6 +44,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if ((_player.Animator.GetCurrentAnimatorStateInfo(0).IsName("Spawn") &&
+            _player.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f)||
+            (_player.Animator.GetCurrentAnimatorStateInfo(0).IsName("Die") &&
+             _player.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1f))
+        {
+            return;
+        }
         Move();
     }
 
@@ -102,7 +109,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (groundLayer.value == (1<<other.gameObject.layer))
         {
-            _player.Animator.SetBool("Fall",false); 
+            _player.Animator.SetBool("Fall",false);
+            _player.Animator.SetBool("Jump",false); 
+            _player.Animator.SetBool("DoubleJump",false); 
             jump = false;
             doublejump = false;
         }

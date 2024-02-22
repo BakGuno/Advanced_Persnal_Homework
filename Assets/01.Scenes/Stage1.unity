@@ -189,6 +189,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4940948434185814513, guid: 8afd973a4fa830948a54f0d375225d85, type: 3}
   m_PrefabInstance: {fileID: 56012057}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &72109317 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6116957278393062397, guid: bde6bffa49d35104089e668b6a5b6664, type: 3}
+  m_PrefabInstance: {fileID: 1254948394}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &72109323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72109317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2d10440e476b9e48962c77eec064c3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parents: {fileID: 251581939}
 --- !u!1001 &251581937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -501,7 +519,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _Player: {fileID: 350384088}
   minX: 0
-  maxX: 0
+  maxX: 28
+--- !u!114 &301280504 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3974070644160722869, guid: 086eabde417e46946b1f18d56917632b, type: 3}
+  m_PrefabInstance: {fileID: 251581937}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &340939217
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -581,6 +610,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 115003004073912190, guid: d8a3307fce7c6f24fb87e197312839f7, type: 3}
+      propertyPath: _lifeText
+      value: 
+      objectReference: {fileID: 301280504}
     - target: {fileID: 115003004073912190, guid: d8a3307fce7c6f24fb87e197312839f7, type: 3}
       propertyPath: healthImages.Array.data[0]
       value: 
@@ -761,7 +794,7 @@ CompositeCollider2D:
   m_GameObject: {fileID: 806758999}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 1648ddc1e4c1a7b4e96129cf381977e7, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -6769,7 +6802,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.01
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4612665674388862041, guid: bde6bffa49d35104089e668b6a5b6664, type: 3}
     m_RemovedGameObjects:
     - {fileID: 8400210889880321709, guid: bde6bffa49d35104089e668b6a5b6664, type: 3}
     - {fileID: 4643574061983411969, guid: bde6bffa49d35104089e668b6a5b6664, type: 3}
@@ -6824,7 +6858,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7659514445278579673, guid: bde6bffa49d35104089e668b6a5b6664, type: 3}
       insertIndex: -1
       addedObject: {fileID: 741682873}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6116957278393062397, guid: bde6bffa49d35104089e668b6a5b6664, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 72109323}
   m_SourcePrefab: {fileID: 100100000, guid: bde6bffa49d35104089e668b6a5b6664, type: 3}
 --- !u!4 &1254948395 stripped
 Transform:
@@ -7278,7 +7315,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
-  m_AnimationFrameRate: 1
+  m_AnimationFrameRate: 15
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -10, y: -5, z: 0}
   m_Size: {x: 49, y: 11, z: 1}
@@ -7843,7 +7880,7 @@ Tilemap:
   - m_RefCount: 8
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
-  m_AnimationFrameRate: 1
+  m_AnimationFrameRate: 10
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: -10, y: -5, z: 0}
   m_Size: {x: 49, y: 11, z: 1}
@@ -7895,7 +7932,7 @@ TilemapCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

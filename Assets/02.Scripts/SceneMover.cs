@@ -9,4 +9,6 @@ public class SceneMover : SingletoneBase<SceneMover>
    {
       SceneManager.LoadScene("TutorialScene");
    }
+   
+   
 }
